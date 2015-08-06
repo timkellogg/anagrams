@@ -2,21 +2,11 @@ require('rspec')
 require('anagrams')
 
 describe("String#anagrams") do
-  it("handles two letters anagrams") do
-    expect('he'.anagrams(['eh', 'he'])).to(eq([true, true]))
+  it("returns the word and a boolean value") do
+    expect("Da".anagrams(["ad", "da"])).to(eq([["ad", true], ["da", true]]))
   end
 
-  it("handles long words") do
-    expect('for'.anagrams(['for', 'rof', 'fro', 'orf', 'ofr', 'rfo'])).to(eq([true, true, true, true, true, true]))
+  it("returns false when not using all letters in anagram") do
+    expect("we".anagrams(['w', 'e'])).to(eq([['w', false], ['e', false]]))
   end
-
-  it("returns false when not using all letters") do
-    expect("we".anagrams(['w', 'e'])).to(eq([false, false]))
-  end
-
-  it("handles upper and lower case letters") do
-    expect("Da".anagrams(["ad", "da"])).to(eq([true, true]))
-  end
-
-
 end

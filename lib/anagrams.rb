@@ -7,9 +7,9 @@ class String
     arr.each do |word|
       sorted_word = word.downcase.split("").sort
       if target_word == sorted_word
-        answer_arr.push(true)
+        answer_arr.push([word, true])
       else
-        answer_arr.push(false)
+        answer_arr.push([word, false])
       end
     end
 

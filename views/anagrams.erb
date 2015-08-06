@@ -1,1 +1,5 @@
-<%= @output %>
+<ul>
+<% @output.each do |word, bool| %>
+  <li><%= word %>: <%= bool %></li>
+<% end %>
+</ul

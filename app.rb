@@ -1,6 +1,7 @@
 require("sinatra")
 require("sinatra/reloader")
-require("./anagrams")
+require("./lib/anagrams")
+
 
 get("/") do
   erb :form
@@ -8,7 +9,7 @@ end
 
 get("/anagrams") do
 
-  base_word = params.fetch("tagert_word")
+  base_word = params.fetch("target_word")
   word_arr  = params.fetch("word_arr")
 
   # Splitting logic
