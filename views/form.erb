@@ -1,10 +1,16 @@
+<h2 class="text-center">Check anagrams</h2>
+
 <form action="/anagrams">
 
-  <label for="target_word">Enter your base word</label>
-  <input name="target_word" type="text">
+  <div class="form-group">
+    <label for="target_word">Enter your base word</label>
+    <input class="form-control" placeholder="word" name="target_word" type="text">
+  </div>
 
-  <label for="word_arr">Type in what you want to check!</label>
-  <input name="word_arr" type="text">
+  <div class="form-group">
+    <label for="word_arr">Type in what you want to check!</label>
+    <input class="form-control" placeholder="word orwd dorwd" name="word_arr" type="text">
+  </div>
 
-  <button type="submit">Submit</button>
+  <button class="btn btn-primary" type="submit">Submit</button>
 </form>

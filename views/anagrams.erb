@@ -1,5 +1,8 @@
-<ul>
-<% @output.each do |word, bool| %>
-  <li><%= word %>: <%= bool %></li>
-<% end %>
-</ul
+<h3 class="text-center">Results</h3>
+
+<dl class="dl-horizontal">
+  <% @output.each do |word, bool| %>
+      <dt><%= word %>:</dt>
+      <dd><%= bool %></dd>
+  <% end %>
+</dl>
